@@ -1,0 +1,1 @@
+./venv/bin/python3 -m fastapi dev src/main_route.py
