@@ -1,3 +1,3 @@
-# Empowerlift
+# Empowerlift ME
 
-A fastt-api and Javascript application to return random powerfull messages
+A fast-api and Javascript application to build a lift and exercice community
