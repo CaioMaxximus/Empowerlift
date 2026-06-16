@@ -1,3 +1,3 @@
 # Empowerlift ME
 
-A fast-api and Javascript application to build a lift and exercice community
+A fast-api and Javascript application to return powerfull quotes
