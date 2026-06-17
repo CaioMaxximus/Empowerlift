@@ -1,4 +1,4 @@
-from repositories.quotes_repository import QuotesReposoitory
+from src.repositories.quotes_repository import QuotesReposoitory
 
 
 

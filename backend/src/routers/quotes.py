@@ -1,8 +1,8 @@
 from fastapi import APIRouter
-from services import quote_service
+from src.services import quote_service
 
 router = APIRouter(
-    prefix ='qoutes'
+    prefix ='/qoutes'
 )
 
 @router.get("/")
