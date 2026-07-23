@@ -1,0 +1,27 @@
+name : backend-workflow
+
+on:
+  push:
+    branches : ['main']
+  pull_request:
+    branches : ['main']
+
+jobs:
+  test-and-deploy:
+    runs-on : [ubuntu-latest, debian-latest]
+
+    steps:
+    - uses : actions/checkout@v4
+
+    - name: set up python 3.11
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.11"
+        cache : 'pip'
+        
+    - name: install dependencies
+      run: |
+        cd backend
+        python -m pip installl --upgrade pip
+        pip install requirements.txt
+

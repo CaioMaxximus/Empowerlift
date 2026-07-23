@@ -25,3 +25,7 @@ class QuotesReposoitory():
             raise ValueError("Quotes already loaded in memory")
         cls.quotes = pd.read_csv(path)
 
+
+# if __name__ == "__main__":
+#     QuotesReposoitory.init_quotes("/home/caiomaxx/Documentos/projetos/empowerlift/backend/quotes.csv")
+#     print(QuotesReposoitory.quotes.head(10))    

@@ -11,13 +11,12 @@ ACTUAL_PATH = Path(__file__).resolve()
 
 QUOTES_PATH = ACTUAL_PATH.parent.parent
 QUOTES_PATH = QUOTES_PATH  / "quotes.csv"
-print("========",flush=True)
-print(QUOTES_PATH,flush=True)
+# print("========",flush=True)
+# print(QUOTES_PATH,flush=True)
 
 
 QuotesReposoitory.init_quotes(QUOTES_PATH)
 api = FastAPI()
-api.include_router(quotes_router)
 
 origins = [
     "http://localhost:3000",    #React (Create React App)
@@ -25,6 +24,11 @@ origins = [
     "http://127.0.0.1:3000",
     "http://127.0.0.1:5173",
 ]
+
+
+ 
+
+api.include_router(quotes_router)
 
 api.add_middleware(
     CORSMiddleware,
