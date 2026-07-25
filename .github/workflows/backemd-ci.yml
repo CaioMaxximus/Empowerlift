@@ -7,7 +7,7 @@ on:
     branches : ['main']
 
 jobs:
-  test-and-deploy:
+  test:
     runs-on : [ubuntu-latest, debian-latest]
 
     steps:
@@ -24,4 +24,7 @@ jobs:
         cd backend
         python -m pip installl --upgrade pip
         pip install requirements.txt
+        pip install pytest
+    - name: run tests
+      run : pytest
 
