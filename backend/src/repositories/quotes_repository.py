@@ -8,22 +8,28 @@ class QuotesReposoitory():
 
     def verify_quotes_state(func):
         def wrapper(*args, **kwargs):
-            if not args[0].quotes:
+            if args[0].quotes is None:
                 raise ValueError("You need to inialize the quotes dataframe first!")
             return func(*args,**kwargs)
         return wrapper
 
     @classmethod
-    # @verify_quotes_state
+    @verify_quotes_state
     def get_ramdom_quote(cls):
 
         return cls.quotes.sample(n = 1).to_dict(orient='records')[0]
+
+    @classmethod
+    def get_all(cls):
+        return cls.quotes.sample(n = 100).to_dict(orient='records')
 
     @classmethod
     def init_quotes(cls, path):
         if cls.quotes:
             raise ValueError("Quotes already loaded in memory")
         cls.quotes = pd.read_csv(path)
+
+    
 
 
 # if __name__ == "__main__":
