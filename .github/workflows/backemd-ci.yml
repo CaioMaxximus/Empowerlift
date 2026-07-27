@@ -29,5 +29,5 @@ jobs:
     - name: run tests
       run : |
         cd backend
-        pytest
+        ./run_tests.sh
 
