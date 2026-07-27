@@ -1,0 +1,26 @@
+name : CI/CD Frontend React
+
+on:
+  push:
+    branches : ["main"]
+  pull_request:
+    branches : ["main"]
+  
+
+jobs:
+
+  test:
+    name: Lint and Unit Tests
+    runs-on : ubuntu-latest
+
+    steps:
+      - name : Checkout code
+        uses:  actions/checkout@v4
+      
+      - name : Set up NodeJS
+        uses : actions/setup-node@v4
+        with : 
+          node-version : 26
+          cache : npm
+      - name: Download dependencies
+        run: npm ci
