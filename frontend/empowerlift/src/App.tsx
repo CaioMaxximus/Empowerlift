@@ -17,9 +17,9 @@ function App() {
     return <div>Carregando...</div>;
   }
   console.log(quoteRes)
-  let my_quote = quoteRes.quote.quote;
-  let author = quoteRes.quote.author;
-  let image_url = quoteRes.photo.urls.full;
+  const my_quote = quoteRes.quote.quote;
+  const author = quoteRes.quote.author;
+  const image_url = quoteRes.photo.urls.full;
 
   
   return (
