@@ -7,7 +7,7 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 backend/quotes.csv
-
+backend/run_server_env_var.sh
 
 # node
 node_modules/
