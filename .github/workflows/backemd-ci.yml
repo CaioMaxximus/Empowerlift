@@ -52,6 +52,6 @@ jobs:
             context : .
             file : ./backend/Dockerfile
             push : true
-          tags : |
-            ${{secrets.DOCKER_USERNAME}}/quotify-fast-api:latest
-            ${{secrets.DOCKER_USERNAME}}/quotify-fast-api:${{github.sha}}
+            tags : |
+              ${{secrets.DOCKER_USERNAME}}/quotify-fast-api:latest
+              ${{secrets.DOCKER_USERNAME}}/quotify-fast-api:${{github.sha}}
